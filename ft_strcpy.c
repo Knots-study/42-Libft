@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 04:42:09 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 21:38:06 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/01 21:49:47 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/01 21:52:53 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+char	*ft_strcpy(char *dest, const char *src)
+{
+	int	idx;
 
-int ft_atoi(const char *str);
-int	ft_islower(int c);
-int	ft_isupper(int c);
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_isspace(int c);
-
-#endif
+	idx = 0;
+	while (src[idx] != '\0')
+	{
+		dest[idx] = src[idx];
+		idx++;
+	}
+	dest[idx] = '\0';
+	return (dest);
+}
