@@ -6,13 +6,13 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 04:41:36 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 04:48:49 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/01 12:36:14 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isupper(int c)
+int	ft_isupper(int c)
 {
-    return ('A' <= c && c <= 'Z');
+	return ('A' <= c && c <= 'Z');
 }

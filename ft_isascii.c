@@ -6,13 +6,13 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 04:49:42 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 04:49:48 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/01 12:35:24 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return (0 <= c && c <= 127);
+	return (0 <= c && c <= 127);
 }

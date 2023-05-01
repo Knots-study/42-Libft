@@ -6,13 +6,13 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 04:46:59 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 04:49:06 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/01 12:35:26 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return ('0' <= c && c <= '9');
+	return ('0' <= c && c <= '9');
 }

@@ -6,13 +6,13 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 04:52:53 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 04:53:11 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/01 12:36:09 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (32 <= c && c <= 126);
+	return (32 <= c && c <= 126);
 }

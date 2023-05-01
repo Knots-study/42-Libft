@@ -6,13 +6,13 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 04:44:07 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 04:49:10 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/01 12:35:27 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_islower(int c)
+int	ft_islower(int c)
 {
-    return ('a' <= c && c <= 'z');
+	return ('a' <= c && c <= 'z');
 }
