@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 12:42:58 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/02 20:03:30 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/02 21:06:59 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/02 21:15:20 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void *ft_calloc(size_t num, size_t size)
 {
-	int	length;
+	void	*memory;
 
-	length = 0;
-	while (length < n)
-	{
-		dest[length] = sec[length];
-		length++;
-	}
-	return (dest);
+	memory = malloc(sizeof(size) * num);
+	if (memory == NULL)
+		return (NULL);
+	ft_bzero(memory, num * size);
+	return (memory);
 }

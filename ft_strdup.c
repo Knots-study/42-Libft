@@ -6,13 +6,13 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:48:36 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 21:56:50 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/02 20:03:16 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*dest;
 
