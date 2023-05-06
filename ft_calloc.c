@@ -6,13 +6,13 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 21:06:59 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/02 21:15:20 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/07 00:41:57 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t num, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
 	void	*memory;
 
