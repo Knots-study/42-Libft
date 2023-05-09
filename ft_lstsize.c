@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 01:01:15 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 01:01:29 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/10 06:55:02 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/10 06:55:02 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strnequ(char const *s1, char const *s2, size_t n)
+#include "libft.h"
+
+int	ft_lstsize(t_list *lst)
 {
-	
+	size_t	size;
+
+	while (lst)
+	{
+		lst = lst -> next;
+		size++;
+	}
+	return (size);
 }

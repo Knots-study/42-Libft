@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 00:55:10 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 00:55:23 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/10 07:09:32 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/10 07:09:32 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstadd(t_list **alst, t_list *new)
+#include "libft.h"
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	
+
 }

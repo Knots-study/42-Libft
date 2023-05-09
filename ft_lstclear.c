@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 21:49:47 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 21:52:53 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/10 06:53:38 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/10 06:53:38 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
-{
-	int	idx;
+#include "libft.h"
 
-	idx = 0;
-	while (src[idx] != '\0')
-	{
-		dest[idx] = src[idx];
-		idx++;
-	}
-	dest[idx] = '\0';
-	return (dest);
+void	ft_lstclear(t_list **lst, void (*del)(void *))
+{
+
 }

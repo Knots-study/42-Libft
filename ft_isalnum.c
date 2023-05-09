@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 00:54:46 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 00:54:57 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/10 06:36:51 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/10 06:36:51 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-	
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

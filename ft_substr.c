@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 00:58:31 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 00:58:42 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/10 07:09:15 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/10 07:09:15 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strdel(char **as)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 00:55:40 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 00:56:01 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/10 06:58:48 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/10 06:58:48 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 
 }

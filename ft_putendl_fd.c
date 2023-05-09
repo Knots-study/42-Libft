@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_alnum.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/01 04:47:39 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 12:32:49 by knottey          ###   ########.fr       */
+/*   Created: 2023/05/10 07:00:58 by knottey           #+#    #+#             */
+/*   Updated: 2023/05/10 07:00:58 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_alnum(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	ft_putchar_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
