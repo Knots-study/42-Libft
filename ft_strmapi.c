@@ -6,11 +6,14 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 01:00:27 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 01:00:43 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:18:53 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	
+	char *u= "aiueo";
+	(void)s;
+	(void)f;
+	return (u);
 }

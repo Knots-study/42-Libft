@@ -6,11 +6,21 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 04:45:35 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 12:35:23 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:31:02 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isupper(int c)
+{
+	return ('A' <= c && c <= 'Z');
+}
+
+int	ft_islower(int c)
+{
+	return ('a' <= c && c <= 'z');
+}
 
 int	ft_isalpha(int c)
 {

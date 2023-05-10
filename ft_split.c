@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 21:32:11 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 00:40:50 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:22:31 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,25 +111,3 @@ char	**ft_split(char *str, char *charset)
 	result[i] = 0;
 	return (result);
 }
-
-// int main(void)
-// {
-//     char *str = "///the,:quick,:/:brown,fox,jumps,over,the,lazy,dog///";
-//     char *charset = ",:/";
-//     char **words = ft_split(str, charset);
-
-//     if (!words)
-//     {
-//         printf("Error: memory allocation failed.\n");
-//         return (1);
-//     }
-
-//     for (int i = 0; words[i]; i++)
-//     {
-//         printf("%s\n", words[i]);
-//         free(words[i]);
-//     }
-//     free(words);
-
-//     return (0);
-// }

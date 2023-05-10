@@ -1,10 +1,9 @@
-NAME = libft
+NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-RM = rm -cf
+RM = del #macOS: rm -rf
 
-SRCS =
-		t_atoi.c \
+SRCS = ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
 		ft_isalnum.c \
@@ -39,8 +38,7 @@ SRCS =
 		ft_tolower.c \
 		ft_toupper.c
 
-BONUS_SRCS =
-		ft_lstnew.c \
+BONUS_SRCS = ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -56,12 +54,15 @@ ifdef BONUS_FLAGS
 	OBJS += $(BONUS_OBJS)
 endif
 
-INCLUDES = libft.h
+INCLUDES = .
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(OBJS): $(SRCS) $(INCLUDES)
 	$(CC) $(CFLAGS) -c $(SRCS) -I $(INCLUDES)
+
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 bonus:
 	make all BONUS_FLAGS=1

@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:10:01 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/02 20:03:44 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:29:49 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int				length;
+	size_t			length;
 	unsigned char	*dest;
 
 	length = 0;

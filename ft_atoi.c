@@ -6,12 +6,19 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:22:35 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 00:41:48 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:29:30 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+int	ft_isspace(int c)
+{
+	c = (unsigned char)c;
+	return (c == '\t' || c == '\n' || c == '\v' ||
+		c == '\f' || c == '\r'	|| c == ' ');
+}
 
 int	ft_space_sign(const char *str, const char **endptr)
 {

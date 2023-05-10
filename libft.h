@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <stdint.h>
+# include <unistd.h>
 # include <limits.h>
 
 typedef struct s_list
@@ -23,6 +24,8 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+int		ft_isspace(int c);
+int		ft_space_sign(const char *str, const char **endptr);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
@@ -41,7 +44,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-char				**ft_split(char const *s, char c);
+char	**ft_split(char *str, char *charset);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *s1);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));

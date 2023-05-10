@@ -14,5 +14,8 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-
+	char *u = "aiueo";
+	(void)s1;
+	(void)set;
+	return (u);
 }

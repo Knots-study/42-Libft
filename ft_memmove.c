@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:42:58 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/02 20:03:30 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:28:28 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,20 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	length;
+	void *a = "a";
+	(void)dest;
+	(void)src;
+	(void)n;
+	return (a);
+	// int	length;
 
-	length = 0;
-	while (length < n)
-	{
-		dest[length] = sec[length];
-		length++;
-	}
-	return (dest);
+	// length = 0;
+	// dest = (char *)dest;
+	// src = (const char *)src;
+	// while (length < n)
+	// {
+	// 	dest[length] = src[length];
+	// 	length++;
+	// }
+	// return ((void *)dest);
 }

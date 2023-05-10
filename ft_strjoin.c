@@ -6,11 +6,14 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 01:01:58 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 01:02:11 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:19:05 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-
+	char *u= "aiueo";
+	(void)s1;
+	(void)s2;
+	return (u);
 }

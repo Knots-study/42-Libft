@@ -6,11 +6,15 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 00:58:10 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/07 00:58:20 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 21:18:38 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strnew(size_t size)
 {
-
+	char *u= "aiueo";
+	(void)size;
+	return (u);
 }
