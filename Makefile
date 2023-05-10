@@ -49,10 +49,7 @@ BONUS_SRCS = ft_lstnew.c \
 		ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
-BONUS_SRCS = $(BONUS_SRCS:.c=.o)
-ifdef BONUS_FLAGS
-	OBJS += $(BONUS_OBJS)
-endif
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 INCLUDES = .
 
@@ -60,12 +57,14 @@ all: $(NAME)
 
 $(OBJS): $(SRCS) $(INCLUDES)
 	$(CC) $(CFLAGS) -c $(SRCS) -I $(INCLUDES)
+$(BONUS_OBJS): $(BONUS_SRCS) $(INCLUDES)
+	$(CC) $(CFLAGS) -c $(BONUS_SRCS) -I $(INCLUDES)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus:
-	make all BONUS_FLAGS=1
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)

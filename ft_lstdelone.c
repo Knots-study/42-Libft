@@ -6,12 +6,14 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 00:54:13 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/10 21:16:53 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/11 00:54:29 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	(void)alst;
+	(void)lst;
 	(void)del;
 }

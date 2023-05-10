@@ -6,13 +6,16 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 00:56:12 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/10 21:15:45 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/11 00:55:55 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-
+	(void)lst;
+	(void)f;
+	(void)del;
+	return (NULL);
 }
