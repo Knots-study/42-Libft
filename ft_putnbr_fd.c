@@ -14,6 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	(void)n;
-	(void)fd;
+	char			cn;
+	long long int	lln;
+
+	lln = (long long int)n;
+	if (lln < 0)
+	{
+		ft_putchar_fd('-', fd);
+		lln *= -1;
+	}
+	if (lln >= 10)
+		ft_putnbr_fd((int)(lln / 10), fd);
+	cn = lln % 10 + '0';
+	ft_putchar_fd(cn, fd);
 }
