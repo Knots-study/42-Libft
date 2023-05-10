@@ -6,19 +6,24 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:34:32 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/02 21:04:27 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/11 00:01:31 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(int n)
+int	ft_intlen(long long int n)
 {
 	int	length;
 
 	length = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
+	{
 		length++;
+		n *= -1;
+	}
 	while (n > 0)
 	{
 		length++;
@@ -29,23 +34,28 @@ int	ft_intlen(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*ans;
-	int		idx;
-	int		elem_length;
+	char			*ans;
+	int				elem_length;
+	long long int	lln;
 
-	idx = 0;
-	elem_length = ft_intlen(n);
+	lln = (long long int)n;
+	elem_length = ft_intlen(lln);
 	ans = (char *)malloc(sizeof(char) * (elem_length + 1));
 	if (ans == NULL)
 		return (NULL);
 	ans[elem_length] = '\0';
-	idx = elem_length - 1;
-	while (n > 0)
+	if (n == 0)
+		ans[0] = '0';
+	else if (n < 0)
 	{
-		ans[idx] = n % 10 + '0';
-		idx--;
+		ans[0] = '-';
+		lln *= -1;
 	}
-	if (n < 0)
-		ans[idx] = '-';
+	while (lln > 0)
+	{
+		ans[elem_length - 1] = lln % 10 + '0';
+		lln /= 10;
+		elem_length--;
+	}
 	return (ans);
 }

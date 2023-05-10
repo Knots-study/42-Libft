@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:48:59 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/01 12:51:31 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/10 23:10:46 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	ft_toupper(int c)
 {
-	if ('a' <= c && c <= 'z')
-		return (c - 32);
-	return (c);
+	unsigned char uc;
+
+	uc = (unsigned char)c;
+	if ('a' <= uc && uc <= 'z')
+		return (uc - ('a' - 'A'));
+	return (uc);
 }

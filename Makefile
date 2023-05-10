@@ -1,7 +1,7 @@
 NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
-RM = del #macOS: rm -rf
+RM = rm -rf
 
 SRCS = ft_atoi.c \
 		ft_bzero.c \
