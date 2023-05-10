@@ -14,8 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char *u = "aiueo";
-	(void)s;
-	(void)c;
-	return (u);
+	size_t			idx;
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
+	idx = ft_strlen(s) + 1;
+	while (idx > 0)
+	{
+		idx--;
+		if (s[idx] == uc)
+			return ((char *)(s + idx));
+	}
+	return (NULL);
 }

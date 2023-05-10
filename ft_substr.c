@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	idx = 0;
-	while (idx < len)
+	while (idx < len && s[start] != '\0')
 	{
 		substr[idx] = s[start];
 		idx++;
