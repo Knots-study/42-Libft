@@ -3,7 +3,7 @@
 
 ## tester
 - https://github.com/usatie/libft-tester-tokyo.git (確認中)
-- https://github.com/alelievr/- libft-unit-test.git (やる予定)
+- https://github.com/alelievr/libft-unit-test.git (やる予定)
 - https://github.com/jtoty/Libftest.git (やる予定)
 - https://github.com/Tripouille/libftTester.git (やる予定)
 
