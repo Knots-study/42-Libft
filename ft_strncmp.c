@@ -22,4 +22,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (s1[idx] != '\0' && s2[idx] != '\0' && s1 == s2 && idx < n)
 		idx++;
 	return (s1[idx] - s2[idx]);
+	//const char*にNULLは入れられないっぽい？
 }
