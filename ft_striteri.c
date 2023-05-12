@@ -6,12 +6,20 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 00:59:30 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/10 21:13:05 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/12 02:23:03 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	(void)s;
-	(void)f;
+	size_t	idx;
+
+	idx = 0;
+	while (s[idx] != '\0')
+	{
+		f(idx, &s[idx]);
+		idx++;
+	}
 }
