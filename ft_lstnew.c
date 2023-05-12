@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 00:52:44 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/11 00:53:00 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/12 11:03:45 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,13 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	(void)content;
-	return (NULL);
+	t_list	*new_lst;
+
+	new_lst = (t_list *)malloc(sizeof(t_list));
+	if (new_lst == NULL)
+		return (NULL);
+	new_lst->content = content;
+	new_lst->next = NULL;
+	return (new_lst);
 }
 
