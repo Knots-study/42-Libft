@@ -26,7 +26,6 @@ int	check_char_in_charset(char c, const char *charset)
 	return (0);
 }
 
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim_str;

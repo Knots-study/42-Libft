@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 00:52:44 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/12 11:03:45 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/13 17:14:44 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_lst->next = NULL;
 	return (new_lst);
 }
-

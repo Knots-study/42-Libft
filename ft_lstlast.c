@@ -16,10 +16,10 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst)
 	{
-		if(lst -> next == NULL)
-			break;
+		if (lst->next == NULL)
+			break ;
 		else
-			lst = lst -> next;
+			lst = lst->next;
 	}
 	return (lst);
 }
