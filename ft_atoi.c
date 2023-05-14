@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:22:35 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/10 21:29:30 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/15 07:21:12 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	ft_space_sign(const char *str, const char **endptr)
 
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	ans;
+	int				sign;
+	long long int	ans;
 
 	sign = ft_space_sign(str, &str);
 	ans = 0;
@@ -53,12 +53,3 @@ int	ft_atoi(const char *str)
 	}
 	return (ans * sign);
 }
-
-// int main(int argc, char *argv[])
-// {
-// 	if (argc != 2){
-// 		return (0);
-// 	}
-// 	int ans = ft_atoi(argv[1]);
-// 	printf("%d\n", ans);
-// }
