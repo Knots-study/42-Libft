@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:48:59 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/12 15:11:37 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/14 08:39:44 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,12 @@ int	ft_toupper(int c)
 		return (c - ('a' - 'A'));
 	return (c);
 }
+
+// int	ft_toupper(int c)
+// {
+// 	if (-128 <= c && c <= -2)
+// 		c += 256;
+// 	if ('a' <= c && c <= 'z')
+// 		return (c - ('a' - 'A'));
+// 	return (c);
+// }
