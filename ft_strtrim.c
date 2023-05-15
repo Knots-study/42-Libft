@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	check_char_in_charset(char c, const char *charset)
 {
@@ -29,28 +30,18 @@ int	check_char_in_charset(char c, const char *charset)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim_str;
-	int		sum_set;
-	int		idx;
+	int		first_idx;
+	int		last_idx;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	sum_set = 0;
-	idx = 0;
-	while (s1[idx] != '\0')
-	{
-		if (check_char_in_charset(s1[idx], set))
-			sum_set++;
-		idx++;
-	}
-	trim_str = (char *)malloc(sizeof(char) * (ft_strlen(s1) - sum_set + 1));
-	if (trim_str == NULL)
-		return (NULL);
-	idx = 0;
-	while (s1[idx] != '\0')
-	{
-		trim_str[idx] = s1[idx];
-		idx++;
-	}
-	trim_str[idx] = '\0';
+	first_idx = 0;
+	while (check_char_in_charset(s1[first_idx], set))
+		first_idx++;
+	last_idx = ft_strlen(s1) - 1;
+	while (check_char_in_charset(s1[last_idx], set))
+		last_idx--;
+	trim_str = ft_substr(s1, first_idx, last_idx - first_idx + 1);
 	return (trim_str);
 }
+//strchr and strrchr is useful, best to use;
