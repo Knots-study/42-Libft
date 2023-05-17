@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 21:32:11 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/17 16:33:57 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/17 17:07:16 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,17 +57,22 @@ int	word_strlen(const char **str, char c)
 	return (length);
 }
 
-void	free_all(char **memory, size_t count)
+int	check_free(char **memory, size_t count)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < count)
+	if (memory[count] == NULL)
 	{
-		free(memory[i]);
-		i++;
+		i = 0;
+		while (i < count)
+		{
+			free(memory[i]);
+			i++;
+		}
+		free(memory);
+		return (1);
 	}
-	free(memory);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -88,11 +93,8 @@ char	**ft_split(char const *s, char c)
 	{
 		word_length = word_strlen(&s, c);
 		result[i] = (char *)malloc(sizeof(char) * (word_length + 1));
-		if (result[i] == NULL)
-		{
-			free_all(result, i);
+		if (check_free(result, i))
 			return (NULL);
-		}
 		ft_strlcpy(result[i], s, word_length + 1);
 		s += word_length;
 		i++;
