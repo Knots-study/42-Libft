@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:22:35 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/18 04:21:19 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 05:06:06 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,22 +44,22 @@ static int	over_num(int sign)
 		return ((int)(LONG_MIN));
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int				sign;
 	long long int	ans;
 
-	sign = ft_space_sign(str, &str);
+	sign = ft_space_sign(nptr, &nptr);
 	ans = 0;
-	while (ft_isdigit(*str))
+	while (ft_isdigit(*nptr))
 	{
 		if (ans > LONG_MAX / 10)
 			return (over_num(sign));
-		if (ans == LONG_MAX / 10 && (*str - '0') > LONG_MAX % 10)
+		if (ans == LONG_MAX / 10 && (*nptr - '0') > LONG_MAX % 10)
 			return (over_num(sign));
 		ans *= 10;
-		ans += *str - '0';
-		str++;
+		ans += *nptr - '0';
+		nptr++;
 	}
 	return ((int)(ans * sign));
 }
