@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:10:01 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/18 05:39:38 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 08:24:14 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	if (s == NULL && n != 0)
+		return ;
 	ft_memset(s, 0, n);
 }
