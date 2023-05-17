@@ -6,20 +6,19 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:22:35 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/17 16:59:40 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 04:21:19 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	return (c == '\t' || c == '\n' || c == '\v'
 		|| c == '\f' || c == '\r' || c == ' ');
 }
 
-int	ft_space_sign(const char *str, const char **endptr)
+static int	ft_space_sign(const char *str, const char **endptr)
 {
 	int	sign;
 
@@ -37,7 +36,7 @@ int	ft_space_sign(const char *str, const char **endptr)
 	return (sign);
 }
 
-int	over_num(int sign)
+static int	over_num(int sign)
 {
 	if (sign == 1)
 		return ((int)(LONG_MAX));
