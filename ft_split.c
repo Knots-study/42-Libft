@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 21:32:11 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/10 22:54:57 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/17 16:33:57 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,7 @@
 #include <stdio.h>
 #include "libft.h"
 
-int	check_char_in_charset(char c, char *charset)
-{
-	int	idx;
-
-	idx = 0;
-	while (charset[idx] != '\0')
-	{
-		if (c == charset[idx])
-		{
-			return (1);
-		}
-		idx++;
-	}
-	return (0);
-}
-
-int	split_and_count_words(char *str, char *charset)
+int	split_count_words(const char *str, char c)
 {
 	int	idx;
 	int	count;
@@ -41,7 +25,7 @@ int	split_and_count_words(char *str, char *charset)
 	word_count_flag = 0;
 	while (str[idx] != '\0')
 	{
-		if (!check_char_in_charset(str[idx], charset))
+		if (str[idx] != c)
 		{
 			if (word_count_flag == 0)
 			{
@@ -56,58 +40,63 @@ int	split_and_count_words(char *str, char *charset)
 	return (count);
 }
 
-int	word_find(char **str, char *charset)
+int	word_strlen(const char **str, char c)
 {
-	int	count;
+	int	length;
+	int	idx;
 
-	count = 0;
-	while (**str != '\0' && check_char_in_charset(**str, charset))
+	length = 0;
+	idx = 0;
+	while (**str != '\0' && **str == c)
 		(*str)++;
-	while (**str != '\0' && !check_char_in_charset(**str, charset))
+	while ((*str)[idx] != '\0' && !((*str)[idx] == c))
 	{
-		count++;
-		(*str)++;
+		length++;
+		idx++;
 	}
-	return (count);
+	return (length);
 }
 
-void	copy_str(char *dest, char **src, int word_length)
+void	free_all(char **memory, size_t count)
 {
-	int	count;
+	size_t	i;
 
-	count = 0;
-	while (**src != '\0' && count < word_length)
+	i = 0;
+	while (i < count)
 	{
-		*dest = **src;
-		dest++;
-		(*src)++;
-		count++;
+		free(memory[i]);
+		i++;
 	}
-	*dest = '\0';
+	free(memory);
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		count_words;
 	int		word_length;
+	int		count_words;
 	int		i;
 
-	count_words = split_and_count_words(str, charset);
+	if (s == NULL)
+		return (NULL);
+	count_words = split_count_words(s, c);
 	result = (char **)malloc(sizeof(char *) * (count_words + 1));
 	if (result == NULL)
 		return (NULL);
 	i = 0;
 	while (i < count_words)
 	{
-		word_length = word_find(&str, charset);
+		word_length = word_strlen(&s, c);
 		result[i] = (char *)malloc(sizeof(char) * (word_length + 1));
 		if (result[i] == NULL)
+		{
+			free_all(result, i);
 			return (NULL);
-		str -= word_length;
-		copy_str(result[i], &str, word_length);
+		}
+		ft_strlcpy(result[i], s, word_length + 1);
+		s += word_length;
 		i++;
 	}
-	result[i] = 0;
+	result[i] = NULL;
 	return (result);
 }
