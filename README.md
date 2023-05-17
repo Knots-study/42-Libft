@@ -1,5 +1,5 @@
 # 42-Libft
-@42_tokyo first-project libft
+@42_tokyo libft(about 70 hours)
 
 ## tester
 - https://github.com/usatie/libft-tester-tokyo.git (確認中)
