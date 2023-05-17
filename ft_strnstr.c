@@ -20,7 +20,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (NULL);
 	if (needle[0] == '\0')
 		return ((char *)haystack);
-	i = 0;
 	needle_len = ft_strlen(needle);
 	while (*haystack != '\0' && len >= needle_len)
 	{
