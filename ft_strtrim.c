@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	check_char_in_charset(char c, const char *charset)
+static int	check_char_in_charset(char c, const char *charset)
 {
 	size_t	idx;
 
