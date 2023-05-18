@@ -11,11 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	check_char_in_charset(char c, const char *charset)
 {
-	int	idx;
+	size_t	idx;
 
 	idx = 0;
 	while (charset[idx] != '\0')
@@ -30,8 +29,8 @@ int	check_char_in_charset(char c, const char *charset)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim_str;
-	int		first_idx;
-	int		last_idx;
+	size_t	first_idx;
+	size_t	last_idx;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
