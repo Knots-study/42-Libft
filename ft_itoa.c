@@ -6,15 +6,15 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 20:34:32 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/11 00:01:31 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 09:19:30 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_intlen(long long int n)
+static size_t	ft_intlen(long long int n)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
 	if (n == 0)
@@ -35,7 +35,7 @@ int	ft_intlen(long long int n)
 char	*ft_itoa(int n)
 {
 	char			*ans;
-	int				elem_length;
+	size_t			elem_length;
 	long long int	lln;
 
 	lln = (long long int)n;
