@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:42:58 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/17 14:28:08 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 14:02:35 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*u_src;
 
 	u_dest = (char *)dest;
-	u_src = (char *)src;
+	u_src = (const char *)src;
 	if (dest < src)
 		ft_memcpy(dest, src, n);
 	else
