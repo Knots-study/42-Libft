@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 04:53:44 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/18 11:09:17 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 11:23:38 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	length;
 
-	if (s == NULL)
-		return (0);
 	length = 0;
 	while (s[length] != '\0')
 		length++;
