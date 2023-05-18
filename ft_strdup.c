@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:48:36 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/12 16:10:53 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 11:04:15 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 char	*ft_strdup(const char *s)
 {
 	char	*dest;
+	size_t	s_len;
 
 	if (s == NULL)
 		return (NULL);
-	dest = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	s_len = ft_strlen(s);
+	dest = (char *)malloc(sizeof(char) * (s_len + 1));
 	if (dest == NULL)
 		return (NULL);
-	ft_strlcpy(dest, s, ft_strlen(s) + 1);
+	ft_strlcpy(dest, s, s_len + 1);
 	return (dest);
 }
