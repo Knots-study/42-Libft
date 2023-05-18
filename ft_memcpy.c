@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 12:45:53 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/16 22:55:52 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 09:46:31 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,16 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*c_dest;
-	char	*c_src;
+	const char	*c_src;
+	size_t	i;
 
 	c_dest = (char *)dest;
-	c_src = (char *)src;
-	while (n--)
+	c_src = (const char *)src;
+	i = 0;
+	while (i < n)
 	{
-		*c_dest = *c_src;
-		c_dest++;
-		c_src++;
+		c_dest[i] = c_src[i];
+		i++;
 	}
 	return (dest);
 }
