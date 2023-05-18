@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 01:01:58 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/18 11:26:28 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 11:33:26 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*join_word;
 	size_t	s1_len;
 	size_t	s2_len;
-	char	*join_word;
 
 	s1_len = 0;
 	s2_len = 0;
