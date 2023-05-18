@@ -6,18 +6,16 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 21:32:11 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/17 17:07:16 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 14:04:50 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-int	split_count_words(const char *str, char c)
+size_t	split_count_words(const char *str, char c)
 {
-	int	idx;
-	int	count;
+	size_t	idx;
+	size_t	count;
 	int	word_count_flag;
 
 	idx = 0;
@@ -40,10 +38,10 @@ int	split_count_words(const char *str, char c)
 	return (count);
 }
 
-int	word_strlen(const char **str, char c)
+size_t	word_strlen(const char **str, char c)
 {
-	int	length;
-	int	idx;
+	size_t	length;
+	size_t	idx;
 
 	length = 0;
 	idx = 0;
@@ -78,9 +76,9 @@ int	check_free(char **memory, size_t count)
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		word_length;
-	int		count_words;
-	int		i;
+	size_t	word_length;
+	size_t	count_words;
+	size_t	i;
 
 	if (s == NULL)
 		return (NULL);
