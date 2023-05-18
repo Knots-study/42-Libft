@@ -6,7 +6,7 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 21:32:11 by knottey           #+#    #+#             */
-/*   Updated: 2023/05/18 14:04:50 by knottey          ###   ########.fr       */
+/*   Updated: 2023/05/18 14:07:44 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	split_count_words(const char *str, char c)
 {
 	size_t	idx;
 	size_t	count;
-	int	word_count_flag;
+	int		word_count_flag;
 
 	idx = 0;
 	count = 0;
