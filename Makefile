@@ -53,18 +53,20 @@ BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 INCLUDES = .
 
+ifdef WITH_BONUS
+	OBJS += $(BONUS_OBJS)
+endif
+
 all: $(NAME)
 
-$(OBJS): $(SRCS) $(INCLUDES)
-	$(CC) $(CFLAGS) -c $(SRCS) -I $(INCLUDES)
-$(BONUS_OBJS): $(BONUS_SRCS) $(INCLUDES)
-	$(CC) $(CFLAGS) -c $(BONUS_SRCS) -I $(INCLUDES)
+%.o:%.c
+	$(CC) $(CFLAGS) -o $@ -c $< -I $(INCLUDES)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus:
+	make WITH_BONUS=1
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
