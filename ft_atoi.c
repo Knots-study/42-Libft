@@ -6,6 +6,20 @@
 /*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 21:22:35 by knottey           #+#    #+#             */
+/*   Updated: 2023/06/18 11:58:58 by knottey          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: knottey <Twitter:@knottey>                 +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/01 21:22:35 by knottey           #+#    #+#             */
 /*   Updated: 2023/05/18 23:12:30 by knottey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
@@ -18,9 +32,9 @@ static int	ft_isspace(int c)
 		|| c == '\f' || c == '\r' || c == ' ');
 }
 
-static int	ft_space_sign(const char *str, const char **endptr)
+static long long int	ft_space_sign(const char *str, const char **endptr)
 {
-	int	sign;
+	long long int	sign;
 
 	while (ft_isspace(*str))
 		str++;
@@ -36,30 +50,26 @@ static int	ft_space_sign(const char *str, const char **endptr)
 	return (sign);
 }
 
-static int	over_num(int sign)
+int	ft_atoi(const char *str)
 {
-	if (sign == 1)
-		return ((int)(LONG_MAX));
-	else
-		return ((int)(LONG_MIN));
-}
-
-int	ft_atoi(const char *nptr)
-{
-	int				sign;
+	long long int	sign;
 	long long int	ans;
 
-	sign = ft_space_sign(nptr, &nptr);
+	sign = ft_space_sign(str, &str);
 	ans = 0;
-	while (ft_isdigit(*nptr))
+	while (ft_isdigit(*str))
 	{
-		if (ans > LONG_MAX / 10)
-			return (over_num(sign));
-		if (ans == LONG_MAX / 10 && (*nptr - '0') > LONG_MAX % 10)
-			return (over_num(sign));
+		if ((ans * sign) > (LONG_MAX / 10))
+			return ((int)(LONG_MAX));
+		if ((ans * sign) == (LONG_MAX / 10) && (*str - '0') > (LONG_MAX % 10))
+			return ((int)(LONG_MAX));
+		if ((ans * sign) < (LONG_MIN / 10))
+			return ((int)LONG_MIN);
+		if ((ans * sign) == (LONG_MIN / 10) && ('0' - *str) < (LONG_MIN % 10))
+			return ((int)LONG_MIN);
 		ans *= 10;
-		ans += *nptr - '0';
-		nptr++;
+		ans += *str - '0';
+		str++;
 	}
 	return ((int)(ans * sign));
 }
