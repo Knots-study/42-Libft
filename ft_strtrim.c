@@ -12,20 +12,6 @@
 
 #include "libft.h"
 
-static int	check_char_in_charset(char c, const char *charset)
-{
-	size_t	idx;
-
-	idx = 0;
-	while (charset[idx] != '\0')
-	{
-		if (c == charset[idx])
-			return (1);
-		idx++;
-	}
-	return (0);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim_str;
@@ -35,12 +21,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	first_idx = 0;
-	while (check_char_in_charset(s1[first_idx], set))
-		first_idx++;
 	last_idx = ft_strlen(s1) - 1;
-	while (check_char_in_charset(s1[last_idx], set))
+	while (s1[first_idx] && ft_strchr(set, s1[first_idx]))
+		first_idx++;
+	while (s1[last_idx] && ft_strrchr(set, s1[last_idx]))
 		last_idx--;
 	trim_str = ft_substr(s1, first_idx, last_idx - first_idx + 1);
 	return (trim_str);
 }
-//strchr and strrchr is useful, best to use;
